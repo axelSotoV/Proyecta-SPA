@@ -1,0 +1,114 @@
+:root {
+    --AzulOscuro: #0b3d41; 
+    --AzulSuave: #268e83; 
+    --Naranjo: #f07d10;
+    --NaranjoFuerte: #e46e00;
+    
+    --P: hsl(180, 3%, 14%);
+    --color-texto-suave: #4a4a4a; 
+    --color-gris-claro: #f4f4f4; /* Para fondos de secciones */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+    image-rendering: auto;
+}
+
+h1 {
+color: var(--AzulOscuro);
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+p {
+    opacity: .7;
+    line-height: 1.5;
+}
+
+/* NAVBAR - MOBILE */
+
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgb(243, 243, 243);
+    background: rgb(252, 252, 252);
+    -moz-box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.48);
+        -webkit-box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.48);
+        box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.48);
+}
+
+nav img {
+    margin: 2rem 5rem;
+    width: 35rem;
+}
+
+/* HEADER - MOBILE */
+
+.header-content {
+    display: grid;
+    text-align: center;
+    margin: 4rem auto;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+    padding: 0 3rem;
+}
+
+.header-content h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--AzulOscuro);
+}
+
+.header-content p {
+    font-weight:800;
+    color: var(--P);
+}
+
+.header-button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.header-button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    background-color: var(--Naranjo);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--NaranjoFuerte);
+    }
+}
