@@ -1,5 +1,5 @@
 :root {
-    --AzulOscuro: #0b3d41; 
+    --AzulOscuro: #0e3a3d; 
     --AzulSuave: #268e83; 
     --Naranjo: #f07d10;
     --NaranjoFuerte: #e46e00;
@@ -56,8 +56,10 @@ p {
 
 nav {
     display: flex;
+    justify-content: center;
     position: sticky;
     top: 0;
+    z-index: 1000;
     border-bottom: 1px solid rgb(243, 243, 243);
     background: rgb(252, 252, 252);
     -moz-box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.48);
@@ -66,8 +68,8 @@ nav {
 }
 
 nav img {
-    margin: 2rem 5rem;
-    width: 35rem;
+    margin: 2rem;
+    width: 30rem;
 }
 
 /* HEADER - MOBILE */
@@ -79,6 +81,7 @@ nav img {
     margin-bottom: 2rem;
     gap: 1.5rem;
     padding: 0 3rem;
+    max-width: 800px; 
 }
 
 .header-content h1 {
@@ -88,7 +91,7 @@ nav img {
 }
 
 .header-content p {
-    font-weight:800;
+    font-weight: bolder;
     color: var(--P);
 }
 
@@ -97,7 +100,7 @@ nav img {
     justify-content: center;
 }
 
-.header-button {
+.global-button{
     padding: 1rem 2rem;
     font-size: 1.6rem;
     font-weight: bolder;
@@ -109,6 +112,191 @@ nav img {
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: var(--NaranjoFuerte);
+        background-color: white;
+        color: var(--AzulOscuro);
+    }
+}
+
+/* QUIÉNES SOMOS */
+
+.quienes-somos {
+    padding: 6rem 3rem;
+    background-color: var(--AzulOscuro); 
+    color: white;
+}
+
+.quienes-somos-top,
+.quienes-somos-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.quienes-somos-top h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+.quienes-somos-top-right {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.quienes-somos-top p {
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.top-button-div, .card-button-div {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 1rem;
+}
+
+.header-button.top-button,
+.header-button.card-button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+.quienes-somos-bottom {
+    margin-top: 5rem;
+    padding: 3rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+}
+
+.tarjeta-blanca {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tarjeta-blanca h3 {
+    color: var(--AzulOscuro);
+    font-size: 2.4rem;
+}
+
+.tarjeta-blanca p {
+    font-weight: 500;
+    color: var(--P);
+    opacity: 0.8;
+}
+
+.tarjeta-blanca .tagline {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--AzulOscuro);
+    opacity: 0.6;
+    letter-spacing: 0.1em;
+}
+
+.saber-mas {
+    background-color: transparent;
+    color: var(--AzulOscuro);
+    border: 2px solid var(--AzulOscuro);
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+
+    /* NAVBAR DESKTOP */
+
+    nav img {
+        width: 25rem; 
+        margin: 1rem 0;
+    }
+
+    /* HEADER DESKTOP */
+    .header-content {
+        margin: 8rem auto 4rem auto;
+    }
+
+    .header-content h1 {
+        font-size: 4.8rem;
+        line-height: 1.2;
+    }
+
+    .header-content p {
+        font-size: 2rem;
+        padding: 0 10%; 
+    }
+
+    .global-button {
+        padding: 1.5rem 4rem; 
+        font-size: 1.8rem;
+    }
+
+    /* QUIÉNES SOMOS  */
+    .quienes-somos {
+        padding: 10rem 10%;
+    }
+
+    .quienes-somos-top {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 5rem;
+        margin-bottom: 8rem;
+    }
+
+    .quienes-somos-top h2 {
+        flex: 1; 
+        font-size: 4rem;
+        max-width: 500px;
+    }
+
+    .quienes-somos-top-right {
+        flex: 1.2;
+        max-width: 600px;
+    }
+
+    .header-button.top-button {
+        padding: 1.2rem 3rem;
+        font-size: 1.6rem;
+    }
+
+    .quienes-somos-bottom {
+        position: relative;
+        min-height: 600px; 
+        height: auto;      
+        padding: 4rem 0;   
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-top: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.pexels.com/photos/3182813/pexels-photo-3182813.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center center / cover no-repeat;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: none;
+    }
+
+    .tarjeta-blanca {
+        position: relative; 
+        width: 45%;
+        max-width: 550px;
+        margin-left: 8%; 
+        padding: 2.3rem 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .tarjeta-blanca h3 {
+        font-size: 3rem;
+    }
+
+    .card-button-div {
+        margin-top: 2rem;
     }
 }
