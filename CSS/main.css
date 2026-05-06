@@ -192,12 +192,197 @@ body {
     color: white;
 }
 
+/* SERVICIOS */
+
+.servicios {
+    padding: 8rem 3rem;
+    background-color: var(--color-gris-claro);
+}
+
+.servicios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicios-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.servicios-header .tagline {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--AzulSuave);
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+}
+
+.servicios-header h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+.servicios-intro {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.7rem;
+}
+
+/* GRID DE TARJETAS */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.servicio-card {
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--Naranjo);
+}
+
+.servicio-icon {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.servicio-card h4 {
+    font-size: 2rem;
+    color: var(--AzulOscuro);
+    margin-bottom: 1.5rem;
+}
+
+.servicio-card p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.servicios-footer {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.servicios-footer p {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--AzulOscuro);
+    opacity: 0.8;
+}
+
+/* CONTACTO */
+
+/* SECCIÓN CONTACTO SIMPLIFICADA */
+.contacto {
+    padding: 8rem 3rem;
+    background-color: white;
+    text-align: center;
+}
+
+.contacto-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contacto-header {
+    margin-bottom: 5rem;
+}
+
+.contacto-header h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+.contacto-intro {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.7rem;
+}
+
+/* CAJAS DE DATOS */
+.datos-contacto-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.dato-item-box {
+    padding: 3rem;
+    background: var(--color-gris-claro);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.dato-item-box:hover {
+    background: #ebebeb;
+}
+
+.dato-item-box .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.dato-item-box strong {
+    display: block;
+    color: var(--AzulSuave);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.dato-item-box a, 
+.dato-item-box p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--AzulOscuro);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-cta-final {
+    margin-top: 2rem;
+}
+
+/* FOOTER */
+.footer-simple {
+    padding: 4rem 3rem;
+    text-align: center;
+    background: var(--AzulOscuro);
+    color: white;
+}
+
+.footer-simple p {
+    font-size: 1.4rem;
+    opacity: 0.7;
+}
+
+/* AJUSTE DESKTOP */
+@media (min-width: 768px) {
+    .contacto {
+        padding: 10rem 10%;
+    }
+}
+
 /* MEDIA QUERIES DESKTOP */
 @media (min-width: 768px) {
     
+    /* HEADER */
+
     .header-content h1 {
         font-size: 4.8rem; 
     }
+
+    /* QUIENES SOMOS */
     
     .quienes-somos { 
         padding: 10rem 10%; 
@@ -233,5 +418,15 @@ body {
         padding: 4rem;
         background: white;
         border-radius: 12px;
+    }
+    
+    /* SERVICIOS */
+
+    .servicios {
+        padding: 10rem 10%;
+    }
+    
+    .servicios-header h2 {
+        font-size: 4rem;
     }
 }
