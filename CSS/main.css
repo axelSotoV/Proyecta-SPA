@@ -3,10 +3,9 @@
     --AzulSuave: #268e83; 
     --Naranjo: #f07d10;
     --NaranjoFuerte: #e46e00;
-    
     --P: hsl(180, 3%, 14%);
     --color-texto-suave: #4a4a4a; 
-    --color-gris-claro: #f4f4f4; /* Para fondos de secciones */
+    --color-gris-claro: #f4f4f4;
 }
 
 * {
@@ -20,152 +19,143 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 1.6rem;
     width: 100%;
+    color: var(--P);
 }
 
-img {
-    object-fit: contain;
-    width: 100%;
-    image-rendering: auto;
-}
-
-h1 {
-color: var(--AzulOscuro);
-}
-
-h2 {
-    font-size: 1.7rem;
-}
-
-h3 {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-p {
-    opacity: .7;
-    line-height: 1.5;
-}
-
-/* NAVBAR - MOBILE */
-
-nav {
+/* NAVBAR (Sin cambios según tu petición) */
+.navbar-main {
     display: flex;
-    justify-content: center;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgb(243, 243, 243);
     background: rgb(252, 252, 252);
-    -moz-box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.48);
-        -webkit-box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.48);
-        box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.48);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
 }
 
-nav img {
-    margin: 2rem;
-    width: 30rem;
+.navbar-main a img {
+    margin: 1rem 1rem 1rem 3rem;
+    width: 6rem;
 }
 
-/* HEADER - MOBILE */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
+.navbar-main .navbar-left .navbar-title {
+    font-size: 2.2rem;
+    color: var(--AzulOscuro);
+}
+
+/* HEADER */
 .header-content {
     display: grid;
     text-align: center;
-    margin: 4rem auto;
-    margin-bottom: 2rem;
-    gap: 1.5rem;
+    margin: 6rem auto;
+    gap: 2rem;
     padding: 0 3rem;
-    max-width: 800px; 
+    max-width: 900px; 
 }
 
 .header-content h1 {
-    text-align: center;
-    font-size: 3rem;
+    font-size: 3.2rem;
+    line-height: 1.1;
     color: var(--AzulOscuro);
 }
 
 .header-content p {
-    font-weight: bolder;
-    color: var(--P);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--color-texto-suave);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .header-button-div {
-    display: flex;
-    justify-content: center;
+    margin-top: 1rem;
 }
 
-.global-button{
-    padding: 1rem 2rem;
+/* BOTONES */
+.global-button {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
     font-size: 1.6rem;
-    font-weight: bolder;
+    font-weight: 700;
     background-color: var(--Naranjo);
     color: white;
-    border: none;
     border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-        background-color: white;
-        color: var(--AzulOscuro);
-    }
+    transition: all 0.3s ease;
+    border: 2px solid var(--Naranjo);
 }
 
-/* QUIÉNES SOMOS */
+.global-button:hover {
+    background-color: transparent;
+    color: var(--Naranjo);
+}
 
+/* SECCIÓN QUIÉNES SOMOS */
 .quienes-somos {
     padding: 6rem 3rem;
     background-color: var(--AzulOscuro); 
     color: white;
 }
 
-.quienes-somos-top,
-.quienes-somos-bottom {
+.quienes-somos-top {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .quienes-somos-top h2 {
     font-size: 2.8rem;
     line-height: 1.2;
-}
-
-.quienes-somos-top-right {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    color: white;
+    margin-bottom: 1.5rem;
 }
 
 .quienes-somos-top p {
-    font-weight: 500;
-    opacity: 0.8;
+    opacity: 0.9;
+    font-size: 1.7rem;
 }
 
-.top-button-div, .card-button-div {
+/* GRID DE PILARES */
+.quienes-somos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.pilar {
     display: flex;
-    justify-content: flex-start; 
-    margin-top: 1rem;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.05);
+    padding: 1.5rem;
+    border-left: 4px solid var(--AzulSuave);
 }
 
-.header-button.top-button,
-.header-button.card-button {
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
+.pilar-icon {
+    color: var(--AzulSuave);
+    font-weight: bold;
+    font-size: 2rem;
 }
 
+/* TARJETA BLANCA / SECCIÓN INFERIOR */
 .quienes-somos-bottom {
-    margin-top: 5rem;
+    margin-top: 6rem;
     padding: 3rem;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
 }
 
 .tarjeta-blanca {
@@ -175,128 +165,73 @@ nav img {
 }
 
 .tarjeta-blanca h3 {
-    color: var(--AzulOscuro);
     font-size: 2.4rem;
+    color: var(--AzulOscuro);
 }
 
 .tarjeta-blanca p {
-    font-weight: 500;
     color: var(--P);
-    opacity: 0.8;
+    font-weight: 500;
 }
 
 .tarjeta-blanca .tagline {
-    font-size: 1.2rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: var(--AzulOscuro);
-    opacity: 0.6;
-    letter-spacing: 0.1em;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--AzulSuave);
+    font-weight: 800;
 }
 
 .saber-mas {
     background-color: transparent;
     color: var(--AzulOscuro);
-    border: 2px solid var(--AzulOscuro);
-    transition: all 0.3s ease;
+    border-color: var(--AzulOscuro);
 }
 
+.saber-mas:hover {
+    background-color: var(--AzulOscuro);
+    color: white;
+}
+
+/* MEDIA QUERIES DESKTOP */
 @media (min-width: 768px) {
-
-    /* NAVBAR DESKTOP */
-
-    nav img {
-        width: 25rem; 
-        margin: 1rem 0;
-    }
-
-    /* HEADER DESKTOP */
-    .header-content {
-        margin: 8rem auto 4rem auto;
-    }
-
+    
     .header-content h1 {
-        font-size: 4.8rem;
-        line-height: 1.2;
+        font-size: 4.8rem; 
     }
-
-    .header-content p {
-        font-size: 2rem;
-        padding: 0 10%; 
-    }
-
-    .global-button {
-        padding: 1.5rem 4rem; 
-        font-size: 1.8rem;
-    }
-
-    /* QUIÉNES SOMOS  */
-    .quienes-somos {
-        padding: 10rem 10%;
+    
+    .quienes-somos { 
+        padding: 10rem 10%; 
+        padding-top: 6rem;
     }
 
     .quienes-somos-top {
-        flex-direction: row; 
+        flex-direction: row;
+        align-items: center;
         justify-content: space-between;
-        align-items: flex-start;
-        gap: 5rem;
-        margin-bottom: 8rem;
     }
 
-    .quienes-somos-top h2 {
-        flex: 1; 
-        font-size: 4rem;
-        max-width: 500px;
-    }
-
-    .quienes-somos-top-right {
-        flex: 1.2;
+    .quienes-somos-top-left { flex: 1; max-width: 500px; }
+    
+    .quienes-somos-grid {
+        flex: 1;
+        grid-template-columns: 1fr 1fr;
         max-width: 600px;
     }
 
-    .header-button.top-button {
-        padding: 1.2rem 3rem;
-        font-size: 1.6rem;
-    }
-
     .quienes-somos-bottom {
-        position: relative;
-        min-height: 600px; 
-        height: auto;      
-        padding: 4rem 0;   
-        width: 100%;
-        max-width: 1400px;
-        margin: 0 auto;
-        margin-top: 0;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('https://images.pexels.com/photos/3182813/pexels-photo-3182813.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center center / cover no-repeat;
-        border-radius: 12px;
-        overflow: hidden;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        box-shadow: none;
+        padding: 0;
+        min-height: 550px;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                    url('https://images.pexels.com/photos/3182813/pexels-photo-3182813.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=940') center/cover;
     }
 
     .tarjeta-blanca {
-        position: relative; 
-        width: 45%;
-        max-width: 550px;
-        margin-left: 8%; 
-        padding: 2.3rem 2rem;
+        width: 40%;
+        margin-left: 8%;
+        padding: 4rem;
         background: white;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .tarjeta-blanca h3 {
-        font-size: 3rem;
-    }
-
-    .card-button-div {
-        margin-top: 2rem;
+        border-radius: 12px;
     }
 }
