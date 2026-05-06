@@ -481,18 +481,7 @@ details p {
     margin-top: 2rem;
 }
 
-/* FOOTER */
-.footer-simple {
-    padding: 4rem 3rem;
-    text-align: center;
-    background: var(--AzulOscuro);
-    color: white;
-}
-
-.footer-simple p {
-    font-size: 1.4rem;
-    opacity: 0.7;
-}
+/* METODOLOGÍA */
 
 .metodologia {
     padding: 8rem 3rem;
@@ -532,6 +521,18 @@ details p {
     opacity: 0.8;
 }
 
+/* FOOTER */
+.footer-simple {
+    padding: 4rem 3rem;
+    text-align: center;
+    background: var(--AzulOscuro);
+    color: white;
+}
+
+.footer-simple p {
+    font-size: 1.4rem;
+    opacity: 0.7;
+}
 /* AJUSTE DESKTOP */
 @media (min-width: 768px) {
     .contacto {
