@@ -29,6 +29,60 @@ body {
     color: var(--P);
 }
 
+/* BANNER */
+
+.top-bar {
+    background-color: var(--AzulOscuro);
+    color: white;
+    padding: 0.8rem 3rem;
+    font-size: 1.3rem;
+}
+
+.top-bar-container {
+    max-width: 1400px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left span {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.top-bar-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.top-bar-right a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.top-bar-right a:hover {
+    opacity: 0.7;
+}
+
+/* MQ SOLO BANNER */
+@media (max-width: 600px) {
+    .top-bar-left {
+        display: none;
+    }
+    .top-bar-container {
+        justify-content: center;
+    }
+    .top-bar-right {
+        gap: 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
 /* NAVBAR (Sin cambios según tu petición) */
 .navbar-main {
     display: flex;
@@ -277,6 +331,79 @@ body {
     opacity: 0.8;
 }
 
+/* FAQ´s */
+
+/* SECCIÓN FAQ */
+.faq {
+    padding: 8rem 3rem;
+    background-color: white;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tagline {
+    text-align: center;
+}
+
+/* Estilo del Acordeón usando <details> y <summary> */
+details {
+    background-color: var(--color-gris-claro);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+details[open] {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--AzulSuave);
+}
+
+summary {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--AzulOscuro);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary::after {
+    content: "+";
+    font-size: 2.4rem;
+    color: var(--AzulSuave);
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+details p {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--P);
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+}
+
 /* CONTACTO */
 
 /* SECCIÓN CONTACTO SIMPLIFICADA */
@@ -428,5 +555,9 @@ body {
     
     .servicios-header h2 {
         font-size: 4rem;
+    }
+
+    .faq {
+        padding: 10rem 10%;
     }
 }
